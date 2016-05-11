@@ -5,7 +5,7 @@
 コンソール上で動作し以下の機能を持ちます。
 
 * カウントアップ・ダウン・リセット
-* カウンターの名前わけ・一覧表示
+* カウンターの名前付け・一覧表示
 
 # コマンド
 
@@ -29,11 +29,43 @@ $ counter up hoge2
 # name list
 $ counter list
 default 0
-hoge  1
+hoge 1
 hoge2 1
 
 # reset
 $ counter reset hoge2
 0
+
+# delete
+$ counter delete hoge2
+$ counter list
+default 0
+hoge 1
+
 ```
+
+# カウンターのデータ型
+
+カウンターの値はJSON型で保管してあります。
+{
+    counter: [
+        {
+          name: "default",
+          num: "0"     
+        },
+        {
+          name: "hoge",
+          num: "1"     
+        },
+        {
+          name: "hoge2",
+          num: "1"
+        }
+
+    ]
+}
+
+# 注意事項
+
+名前を付けない場合、defaultとなります。  
 
