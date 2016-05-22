@@ -38,10 +38,6 @@ $ counter list
 | hoge2   | 1     |
 |-----------------|
 
-# reset
-$ counter reset hoge2
-0
-
 # delete
 $ counter delete hoge2
 $ counter list
