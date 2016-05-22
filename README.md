@@ -28,9 +28,15 @@ $ counter up hoge2
 
 # name list
 $ counter list
-default 0
-hoge 1
-hoge2 1
+|-----------------|
+| Name    | Count |
+|-----------------|
+| default | 0     |
+|-----------------|
+| hoge1   | 1     |
+|-----------------|
+| hoge2   | 1     |
+|-----------------|
 
 # reset
 $ counter reset hoge2
@@ -39,8 +45,13 @@ $ counter reset hoge2
 # delete
 $ counter delete hoge2
 $ counter list
-default 0
-hoge 1
+|-----------------|
+| Name    | Count |
+|-----------------|
+| default | 0     |
+|-----------------|
+| hoge1   | 1     |
+|-----------------|
 
 ```
 
@@ -48,20 +59,19 @@ hoge 1
 
 カウンターの値はJSON型で保管してあります。
 {
-    counter: [
+    counters: [
         {
-          name: "default",
-          num: "0"     
+          name: "default".
+          num: "0",
         },
         {
-          name: "hoge",
+          name: "hoge1",
           num: "1"     
         },
         {
           name: "hoge2",
           num: "1"
         }
-
     ]
 }
 
